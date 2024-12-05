@@ -1,0 +1,10 @@
+appId: com.anonymous.appfilms
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn: maria@gmail.com
+- inputText: example@gmai.com
+- tapOn: Sua senha
+- inputText: Ab12345678@
+- tapOn: Login
+- assertVisible: "Email ou senha incorreta."

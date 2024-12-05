@@ -4,7 +4,7 @@ import Entypo from "@expo/vector-icons/Entypo";
 import { useContext, useEffect, useRef } from "react";
 import styles from "./styles";
 import CountPage from "../CountPage/CountPage";
-import { SearchContext } from "@/context/SearchContext.";
+import { SearchContext } from "@/context/SearchContext";
 import { useRouter } from "expo-router";
 
 export default function MovieList() {
@@ -17,6 +17,8 @@ export default function MovieList() {
     if (searchMovie.length > 0) {
       await searchMovieAPI(newPage);
     } else {
+      console.log("a");
+
       await loadMovies(newPage);
     }
     scrollRef.current?.scrollTo({ animated: true, y: 0 });

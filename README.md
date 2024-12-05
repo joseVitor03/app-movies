@@ -1,50 +1,49 @@
-# Welcome to your Expo app 👋
+<h1 align='center'>APP Movies</h1>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<h4>Glossário</h4>
 
-## Get started
+- O que é esse projeto? E o que é possivel fazer?
+- Tecnologias Utilizadas
+- Como rodar o projeto no seu computador?
+- Como rodar os testes?
+- App em Funcionamento
 
-1. Install dependencies
+## O que é esse projeto? E o que é possivel fazer?
 
-   ```bash
-   npm install
-   ```
+**O APP Movies tem como objetivo listar os Filmes e Séries e algumas outras coisas**
 
-2. Start the app
+#### Com o app é possivel:
 
-   ```bash
-    npx expo start
-   ```
+<details>
 
-In the output, you'll find options to open the app in a
+#### Tela de Filmes:
+- Visualizar os filmes em lançamentos.
+- Procurar filmes de barra de busca.
+- Clicar no card do filme e visualizar os seus detalhes.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+#### Tela de Séries:
+- Visualizar os séries em lançamentos.
+- Procurar séries de barra de busca.
+- Clicar no card do série e visualizar os seus detalhes.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+#### Tela de Top Avaliações:
+- Visualizar os Filmes e Séries com as melhores avaliações.
+- Clicar no card do série e visualizar os seus detalhes.
 
-## Get a fresh project
+#### Tela de Favoritos:
+- Visualizar os Filmes e Séries marcados pelo usuário como um dos seus favoritos.
+- Clicar no card e remover da sua lista.
 
-When you're ready, run:
+</details>
 
-```bash
-npm run reset-project
-```
+## Tecnologias Utilizadas
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+<div align="center">
 
-## Learn more
+![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-To learn more about developing your project with Expo, look at the following resources:
+</div>
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Telas do APP

@@ -22,7 +22,10 @@ export default function CountPage({
         />
       </TouchableOpacity>
       <Text style={styles.count}>{page}</Text>
-      <TouchableOpacity onPress={() => updatePage(page + 1)}>
+      <TouchableOpacity
+        testID="nextPageMovie"
+        onPress={() => updatePage(page + 1)}
+      >
         <AntDesign name="arrowright" size={30} color="white" />
       </TouchableOpacity>
     </View>

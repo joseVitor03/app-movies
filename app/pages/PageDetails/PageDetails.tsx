@@ -8,6 +8,7 @@ import {
 } from "@/types/DetailsType";
 import MovieDetails from "@/components/MovieDetails/MovieDetails";
 import SerieDetails from "@/components/SerieDetails/SerieDetails";
+import mockDetailsMovie from "@/mocks/mockDetailsMovie";
 export default function PageDetails() {
   const KEY = process.env.EXPO_PUBLIC_API_KEY;
   const API = process.env.EXPO_PUBLIC_API_URL;
@@ -41,8 +42,10 @@ export default function PageDetails() {
             `${API}movie/${movieId}/credits?language=pt-BR`,
             OPTIONS,
           );
-          const resultCredits = await dataCredits.json();
           const resultMovie = await dataMovie.json();
+
+          const resultCredits = await dataCredits.json();
+
           setMovieDetails({
             data: resultMovie,
             credits: {

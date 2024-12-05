@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     color: "#fff",
   },
   containerInput: {
-    width: "72%",
+    width: "70%",
     flexDirection: "row",
     marginTop: "5%",
     marginLeft: "2%",
@@ -28,9 +28,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   inputSearch: {
-    width: "95%",
+    width: "90%",
     padding: "2%",
     marginTop: "2%",
+    marginRight: "5%",
     backgroundColor: "#dbdbdb",
     borderRadius: 8,
     textAlign: "left",

@@ -1,0 +1,8 @@
+appId: com.anonymous.appfilms
+---
+- launchApp
+- tapOn: maria@gmail.com
+- inputText: example@gmail.com
+- tapOn: Sua senha
+- inputText: Ab12345678@
+- tapOn: Login

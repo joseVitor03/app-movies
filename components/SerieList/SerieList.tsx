@@ -1,4 +1,4 @@
-import { SearchContext } from "@/context/SearchContext.";
+import { SearchContext } from "@/context/SearchContext";
 import { useContext, useEffect, useRef } from "react";
 import { Image, ScrollView, Text, View, TouchableOpacity } from "react-native";
 import { AnimatedCircularProgress } from "react-native-circular-progress";

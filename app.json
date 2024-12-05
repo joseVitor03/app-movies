@@ -34,6 +34,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "533e79ff-e32c-4108-bf31-6b2b590da691"
+      }
+    },
+    "owner": "ze_vitor_dev"
   }
 }

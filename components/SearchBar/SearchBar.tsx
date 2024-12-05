@@ -1,9 +1,8 @@
-import { SearchContext } from "@/context/SearchContext.";
-import { useContext, useState, useRef, useEffect } from "react";
-import { StatusBar } from "expo-status-bar";
+import { SearchContext } from "@/context/SearchContext";
+import { useContext, useState, useRef } from "react";
 import { Text, View, TextInput } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import Feather from "@expo/vector-icons/Feather";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import styles from "./styles";
 
 export default function SearchBar({ title }: { title: string | undefined }) {
@@ -23,8 +22,6 @@ export default function SearchBar({ title }: { title: string | undefined }) {
     if (title === "Filmes") {
       await searchMovieAPI();
     } else {
-      console.log("a");
-
       await searchSeriesAPI();
     }
     scrollRef.current?.scrollTo({ animated: true, y: 0 });
@@ -44,6 +41,8 @@ export default function SearchBar({ title }: { title: string | undefined }) {
   };
 
   const handleOpenKeyBoard = () => {
+    console.log(isFocused);
+
     if (!isFocused) {
       setIsFocused(true);
       setTimeout(() => {
@@ -57,7 +56,6 @@ export default function SearchBar({ title }: { title: string | undefined }) {
 
   return (
     <>
-      <StatusBar style="dark" backgroundColor="red" />
       <View style={styles.header}>
         <Text onPress={handleLoad} style={styles.title}>
           {title}
@@ -85,9 +83,9 @@ export default function SearchBar({ title }: { title: string | undefined }) {
               color="white"
             />
           ) : (
-            <Feather
+            <MaterialIcons
+              name="cancel"
               onPress={handleOpenKeyBoard}
-              name="x"
               size={24}
               color="white"
             />

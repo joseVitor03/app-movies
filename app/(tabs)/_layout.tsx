@@ -3,7 +3,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import Entypo from "@expo/vector-icons/Entypo";
 import { View } from "react-native";
 import SearchBar from "@/components/SearchBar/SearchBar";
-import SearchProvider from "@/context/SearchContext.";
+import SearchProvider from "@/context/SearchContext";
 
 export default function TabLayout() {
   return (
@@ -27,7 +27,9 @@ export default function TabLayout() {
         >
           <Tabs.Screen
             name="index"
+            data-testid="movie"
             options={{
+              tabBarTestID: "movie",
               title: "Filmes",
               header: ({ options: { title } }) => (
                 <>
