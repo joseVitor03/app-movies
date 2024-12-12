@@ -1,0 +1,19 @@
+appId: com.anonymous.appfilms
+---
+- runFlow: Login.yaml
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    id: "btnSearch"
+- inputText: gladiador
+- pressKey: Enter
+- assertVisible: "Gladiador 2"
+- assertVisible: "Gladiador"
+- tapOn:
+    id: "serie"
+- tapOn:
+    id: "btnSearch"
+- inputText: arcane
+- pressKey: Enter
+- assertVisible: "Arcane"
+- assertVisible: "Arcana Famiglia"

@@ -11,7 +11,10 @@ export default function SearchProvider({
   children: React.ReactNode;
 }) {
   const KEY = process.env.EXPO_PUBLIC_API_KEY;
-  const API = process.env.EXPO_PUBLIC_API_URL;
+  const API =
+    process.env.EXPO_PUBLIC_NODE_ENV === "test"
+      ? "http://10.0.2.2:8080"
+      : process.env.EXPO_PUBLIC_API_URL;
 
   const scrollRef = useRef<ScrollView>(null);
 
@@ -25,7 +28,7 @@ export default function SearchProvider({
   const searchSeriesAPI = async (currentPage: number = 1) => {
     try {
       const data = await fetch(
-        `${API}search/tv?query=${searchSeries}&include_adult=false&language=pt-BR&page=${currentPage}'`,
+        `${API}/search/tv?query=${searchSeries}&include_adult=false&language=pt-BR&page=${currentPage}`,
         {
           method: "GET",
           headers: {
@@ -34,7 +37,6 @@ export default function SearchProvider({
           },
         },
       );
-      console.log(searchSeries);
 
       scrollRef.current?.scrollTo({ animated: true, y: 0 });
       const { results } = await data.json();
@@ -50,7 +52,7 @@ export default function SearchProvider({
   const loadSeries = async (currentPage: number = 1) => {
     try {
       const data = await fetch(
-        `${API}tv/airing_today?language=pt-BR&page=${currentPage}`,
+        `${API}/tv/airing_today?language=pt-BR&page=${currentPage}`,
         {
           method: "GET",
           headers: {
@@ -74,7 +76,7 @@ export default function SearchProvider({
   const searchMovieAPI = async (currentPage: number = 1) => {
     try {
       const data = await fetch(
-        `${API}search/movie?query=${searchMovie}&include_adult=false&language=pt-BR&page=${currentPage}`,
+        `${API}/search/movie?query=${searchMovie}&include_adult=false&language=pt-BR&page=${currentPage}`,
         {
           method: "GET",
           headers: {
@@ -96,7 +98,7 @@ export default function SearchProvider({
   const loadMovies = async (currentPage: number = 1) => {
     try {
       const data = await fetch(
-        `${API}movie/now_playing?language=pt-BR&page=${currentPage}`,
+        `${API}/movie/now_playing?language=pt-BR&page=${currentPage}`,
         {
           method: "GET",
           headers: {
@@ -105,6 +107,10 @@ export default function SearchProvider({
           },
         },
       );
+      console.log(
+        `${API}/movie/now_playing?language=pt-BR&page=${currentPage}`,
+      );
+
       setPageMovies(currentPage);
       const { results } = await data.json();
       setMovies(results);

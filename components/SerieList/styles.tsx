@@ -27,10 +27,10 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
   },
-  raiting: {
-    marginTop: "-12%",
+  note: {
+    marginBottom: "2%",
     marginLeft: "4%",
-    // backgroundColor: "#424242",
+    color: "#ffff",
   },
   insideRaiting: {
     position: "absolute",

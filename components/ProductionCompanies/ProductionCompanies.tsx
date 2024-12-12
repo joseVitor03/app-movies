@@ -14,7 +14,7 @@ export default function ProductionCompanies({
       pagingEnabled={false}
       keyExtractor={(item) => item.id.toString()}
       renderItem={({ item }) => (
-        <View style={styles.card}>
+        <View style={styles.card} testID="companies">
           <View style={styles.containerText}>
             <Text style={styles.name}>{item.name}</Text>
           </View>

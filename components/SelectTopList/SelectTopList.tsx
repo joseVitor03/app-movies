@@ -10,6 +10,7 @@ export default function SelectTopList({
   return (
     <View style={styles.containerTop}>
       <TouchableOpacity
+        testID="btnTopRatedMovie"
         disabled={activeTop === "Movies"}
         onPress={() => setActiveTop("Movies")}
       >
@@ -22,6 +23,7 @@ export default function SelectTopList({
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
+        testID="btnTopRatedSerie"
         disabled={activeTop === "Series"}
         onPress={() => setActiveTop("Series")}
       >

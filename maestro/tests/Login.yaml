@@ -1,6 +1,8 @@
 appId: com.anonymous.appfilms
 ---
 - launchApp
+- waitForAnimationToEnd:
+    timeout: 2000
 - tapOn: maria@gmail.com
 - inputText: example@gmail.com
 - tapOn: Sua senha

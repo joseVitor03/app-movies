@@ -1,0 +1,13 @@
+{ 
+  "request": {
+    "method": "GET",
+    "url": "/movie/558449?language=pt-BR"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"adult\":false,\"budget\":310000000,\"genres\":[{\"id\":28,\"name\":\"Ação\"},{\"id\":12,\"name\":\"Aventura\"}],\"id\":558449,\"origin_country\":[\"US\"],\"original_language\":\"en\",\"original_title\":\"Gladiator II\",\"overview\":\"Anos depois de testemunhar a trágica morte do reverenciado herói Maximus nas mãos de seu tio malvado, Lucius se vê forçado a lutar no Coliseu depois que sua terra natal é conquistada por dois imperadores tirânicos, que agora governam Roma. Com o coração ardendo de raiva e o destino do Império pendurado por um fio, Lucius deve enfrentar perigos e inimigos, redescobrindo em seu passado a força e a honra necessárias para trazer a glória de Roma de volta ao seu povo. Prepare-se para uma jornada épica de coragem e vingança na sangrenta arena do Coliseu.\",\"popularity\":1293.172,\"poster_path\":\"/342bly9MqveL65TnEFzx8TTUxcL.jpg\",\"production_companies\":[{\"id\":4,\"logo_path\":\"/gz66EfNoYPqHTYI4q9UEN4CbHRc.png\",\"name\":\"Paramount Pictures\",\"origin_country\":\"US\"},{\"id\":14440,\"logo_path\":\"/5QbaGiuxc91D6qf75JZGX6OKXoU.png\",\"name\":\"Red Wagon Entertainment\",\"origin_country\":\"US\"},{\"id\":49325,\"logo_path\":\"/R05WCoCJcPWGSDaKaYgx3AeVuR.png\",\"name\":\"Parkes+MacDonald Image Nation\",\"origin_country\":\"US\"},{\"id\":221347,\"logo_path\":\"/6Ry6uNBaa0IbbSs1XYIgX5DkA9r.png\",\"name\":\"Scott Free Productions\",\"origin_country\":\"US\"}],\"release_date\":\"2024-11-13\",\"revenue\":307307811,\"runtime\":150,\"title\":\"Gladiador 2\",\"vote_average\":6.7}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: "#2a2a2a",
     width: "45%",
-    height: 350,
     color: "#ffffff",
     borderStyle: "solid",
     borderWidth: 2,
@@ -29,6 +28,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#ffff",
     margin: "2%",
+    paddingBottom: "5%",
   },
   note: {
     marginBottom: "2%",

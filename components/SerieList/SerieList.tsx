@@ -61,24 +61,13 @@ export default function SerieList() {
                     uri: `https://image.tmdb.org/t/p/w600_and_h900_bestv2/${serie.poster_path}`,
                   }}
                 />
-                <View style={styles.raiting}>
-                  <AnimatedCircularProgress
-                    size={50}
-                    width={4}
-                    fill={serie.vote_average * 10}
-                    tintColor="#00e0ff"
-                    backgroundColor="#2d455e"
-                  >
-                    {() => (
-                      <View style={styles.insideRaiting}>
-                        <Text style={{ fontSize: 18, color: "#ffffff" }}>
-                          {Number(serie.vote_average * 10).toFixed(0)}
-                        </Text>
-                      </View>
-                    )}
-                  </AnimatedCircularProgress>
-                </View>
-
+                <Text style={styles.note}>
+                  <Image
+                    style={{ width: 25, height: 25 }}
+                    source={require("@/assets/images/star.png")}
+                  />
+                  {Number(serie.vote_average).toFixed(1)}
+                </Text>
                 <Text style={styles.title}>{serie.name}</Text>
               </View>
             </TouchableOpacity>

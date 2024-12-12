@@ -48,15 +48,6 @@ export default function SerieDetails({ serie }: { serie: SerieDetailsType }) {
     }
   };
 
-  const clearFavorites = async () => {
-    try {
-      await AsyncStorage.removeItem("favoriteSeries");
-      console.log("favoritesSeries cleared");
-    } catch (error) {
-      console.error("Failed to clear favoriteSeries:", error);
-    }
-  };
-
   useEffect(() => {
     const load = async () => {
       try {
@@ -71,7 +62,6 @@ export default function SerieDetails({ serie }: { serie: SerieDetailsType }) {
       } catch (error) {
         console.log(error);
       }
-      // clearFavorites();
     };
     load();
   }, []);
@@ -96,6 +86,7 @@ export default function SerieDetails({ serie }: { serie: SerieDetailsType }) {
             <TouchableOpacity onPress={handleFavorite}>
               <Entypo
                 name="heart"
+                testID="btnFavoriteSerie"
                 size={24}
                 color={isFavorite !== null ? "red" : "black"}
               />
@@ -108,7 +99,7 @@ export default function SerieDetails({ serie }: { serie: SerieDetailsType }) {
             pagingEnabled={false}
             keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
-              <View style={styles.genre}>
+              <View testID="genres" style={styles.genre}>
                 <Text style={styles.genreText}>{item.name}</Text>
               </View>
             )}
@@ -138,7 +129,9 @@ export default function SerieDetails({ serie }: { serie: SerieDetailsType }) {
                     }}
                   />
                   <View style={styles.containerTexts}>
-                    <Text style={styles.name}>{item.name}</Text>
+                    <Text testID="personOfProduction" style={styles.name}>
+                      {item.name}
+                    </Text>
                   </View>
                 </View>
               )}

@@ -38,6 +38,9 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 250,
   },
+  rate: {
+    fontSize: 25,
+  },
   title: {
     textAlign: "center",
     fontSize: 16,

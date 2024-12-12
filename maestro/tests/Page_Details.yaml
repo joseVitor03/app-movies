@@ -1,0 +1,32 @@
+appId: com.anonymous.appfilms
+---
+- runFlow: Login.yaml
+- waitForAnimationToEnd:
+    timeout: 5000
+- assertVisible: "Gladiador 2"
+- tapOn: 'Gladiador 2'
+- assertVisible: 6.7/10
+- assertVisible: Ação
+- assertVisible: Aventura
+- assertVisible: "Data Lançamento: 13/11/2024"
+- assertVisible: 'Anos depois de testemunhar a trágica morte do reverenciado herói Maximus nas mãos de seu tio malvado, Lucius se vê forçado a lutar no Coliseu depois que sua terra natal é conquistada por dois imperadores tirânicos, que agora governam Roma. Com o coração ardendo de raiva e o destino do Império pendurado por um fio, Lucius deve enfrentar perigos e inimigos, redescobrindo em seu passado a força e a honra necessárias para trazer a glória de Roma de volta ao seu povo. Prepare-se para uma jornada épica de coragem e vingança na sangrenta arena do Coliseu.'
+- scrollUntilVisible:
+    element:
+      id: "nameActor" # or any other selector
+- assertVisible: "Elenco:"
+- assertVisible: Paul Mescal
+- scrollUntilVisible:
+    element:
+      id: "personOfProduction"
+- assertVisible: "Equipe Produção:"
+- assertVisible: David Franzoni
+- assertVisible: "Empresas de Produção:"
+- assertVisible: Paramount Pictures
+- assertVisible: Red Wagon Entertainment
+- swipe:
+    from: 
+      id: "companies" # Ponto inicial do swipe
+    direction: "left"
+    duration: 40
+- assertVisible: Parkes+MacDonald Image Nation
+- assertVisible: Scott Free Productions

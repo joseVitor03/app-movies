@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/tv/94605?language=pt-BR"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"adult\":false,\"backdrop_path\":\"/wQEW3xLrQAThu1GvqpsKQyejrYS.jpg\",\"created_by\":[{\"id\":2000007,\"credit_id\":\"62d5e468c92c5d004f0d1201\",\"name\":\"Christian Linke\",\"original_name\":\"Christian Linke\",\"gender\":2,\"profile_path\":\"/u1uCJkmVSeLQC1CwSB7UzXAVbqO.jpg\"},{\"id\":3299121,\"credit_id\":\"62d5e46e72c13e062e7196aa\",\"name\":\"Alex Yee\",\"original_name\":\"Alex Yee\",\"gender\":2,\"profile_path\":\"/kvRKbXZcCnM6d1vcND4917iQ4kp.jpg\"}],\"episode_run_time\":[],\"first_air_date\":\"2021-11-06\",\"genres\":[{\"id\":16,\"name\":\"Animação\"},{\"id\":10765,\"name\":\"Sci-Fi & Fantasy\"},{\"id\":10759,\"name\":\"Action & Adventure\"},{\"id\":9648,\"name\":\"Mistério\"}],\"homepage\":\"https://arcane.com\",\"id\":94605,\"in_production\":false,\"languages\":[\"en\"],\"last_air_date\":\"2024-11-23\",\"name\":\"Arcane\",\"next_episode_to_air\":null,\"networks\":[{\"id\":213,\"logo_path\":\"/wwemzKWzjKYJFfCeiB57q3r4Bcm.png\",\"name\":\"Netflix\",\"origin_country\":\"\"}],\"number_of_episodes\":18,\"number_of_seasons\":2,\"origin_country\":[\"US\"],\"original_language\":\"en\",\"original_name\":\"Arcane\",\"overview\":\"Em meio ao conflito entre as cidades-gêmeas de Piltover e Zaun, duas irmãs lutam em lados opostos de uma guerra entre tecnologias mágicas e convicções incompatíveis.\",\"popularity\":742.666,\"poster_path\":\"/m3Tzf6k537PnhOEwaSRNCSxedLS.jpg\",\"production_companies\":[{\"id\":99496,\"logo_path\":\"/6WTCdsmIH6qR2zFVHlqjpIZhD5A.png\",\"name\":\"Fortiche Production\",\"origin_country\":\"FR\"},{\"id\":124172,\"logo_path\":\"/sBlhznEktXKBqC87Bsfwpo1YbYR.png\",\"name\":\"Riot Games\",\"origin_country\":\"US\"}],\"production_countries\":[{\"iso_3166_1\":\"FR\",\"name\":\"France\"},{\"iso_3166_1\":\"US\",\"name\":\"United States of America\"}],\"spoken_languages\":[{\"english_name\":\"English\",\"iso_639_1\":\"en\",\"name\":\"English\"}],\"status\":\"Ended\",\"tagline\":\"A caçada começou.\",\"type\":\"Scripted\",\"vote_average\":8.774,\"vote_count\":4534}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

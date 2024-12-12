@@ -45,6 +45,7 @@ export default function TabLayout() {
             name="Series/SeriesHome"
             options={{
               title: "Séries",
+              tabBarTestID: "serie",
               header: ({ options: { title } }) => <SearchBar title={title} />,
               tabBarIcon: ({ color }) => (
                 <FontAwesome name="tv" size={20} color={color} />
@@ -54,6 +55,7 @@ export default function TabLayout() {
           <Tabs.Screen
             name="Popular/Popular"
             options={{
+              tabBarTestID: "popular",
               headerTitleStyle: {
                 color: "#ffff",
               },
@@ -66,6 +68,7 @@ export default function TabLayout() {
           <Tabs.Screen
             name="Favorite/Favorite"
             options={{
+              tabBarTestID: "favorite",
               headerTitle: "Filmes e Séries favoritos",
               headerTitleStyle: {
                 color: "#ffff",

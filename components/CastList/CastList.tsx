@@ -19,7 +19,9 @@ export default function CastList({ cast }: { cast: CastMember[] }) {
             }}
           />
           <View style={styles.containerTexts}>
-            <Text style={styles.nameActor}>{item.name}</Text>
+            <Text testID="nameActor" style={styles.nameActor}>
+              {item.name}
+            </Text>
             <Text style={styles.nameCharacter}>{item.character}</Text>
           </View>
         </View>

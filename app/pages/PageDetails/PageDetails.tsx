@@ -8,10 +8,13 @@ import {
 } from "@/types/DetailsType";
 import MovieDetails from "@/components/MovieDetails/MovieDetails";
 import SerieDetails from "@/components/SerieDetails/SerieDetails";
-import mockDetailsMovie from "@/mocks/mockDetailsMovie";
+
 export default function PageDetails() {
   const KEY = process.env.EXPO_PUBLIC_API_KEY;
-  const API = process.env.EXPO_PUBLIC_API_URL;
+  const API =
+    process.env.EXPO_PUBLIC_NODE_ENV === "test"
+      ? "http://10.0.2.2:8080"
+      : process.env.EXPO_PUBLIC_API_URL;
   const OPTIONS = {
     method: "GET",
     headers: {
@@ -35,14 +38,15 @@ export default function PageDetails() {
       if (movieId) {
         try {
           const dataMovie = await fetch(
-            `${API}movie/${movieId}?language=pt-BR`,
+            `${API}/movie/${movieId}?language=pt-BR`,
             OPTIONS,
           );
           const dataCredits = await fetch(
-            `${API}movie/${movieId}/credits?language=pt-BR`,
+            `${API}/movie/${movieId}/credits?language=pt-BR`,
             OPTIONS,
           );
           const resultMovie = await dataMovie.json();
+          console.log(`${API}/movie/${movieId}?language=pt-BR`);
 
           const resultCredits = await dataCredits.json();
 
@@ -64,11 +68,11 @@ export default function PageDetails() {
       } else {
         try {
           const dataSerie = await fetch(
-            `${API}tv/${serieId}?language=pt-BR`,
+            `${API}/tv/${serieId}?language=pt-BR`,
             OPTIONS,
           );
           const dataCredits = await fetch(
-            `${API}tv/${serieId}/credits?language=pt-BR`,
+            `${API}/tv/${serieId}/credits?language=pt-BR`,
             OPTIONS,
           );
           const resultCredits = await dataCredits.json();

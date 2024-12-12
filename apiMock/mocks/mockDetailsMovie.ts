@@ -219,7 +219,7 @@ const mockDetailsMovie = {
         department: "Production",
         job: "Producer",
       },
-    ] as CrewMember[],
+    ],
   },
 };
 export default mockDetailsMovie;

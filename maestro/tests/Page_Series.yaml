@@ -1,0 +1,37 @@
+appId: com.anonymous.appfilms
+---
+- runFlow: Login.yaml
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: 'Séries'
+- assertVisible: "Arcane"
+- tapOn: 'Arcane'
+- assertVisible: 8.8/10
+- assertVisible: Animação
+- assertVisible: Sci-Fi & Fantasy
+- swipe:
+    from: 
+      id: "genres" # Ponto inicial do swipe
+    direction: "left"
+    duration: 40
+- assertVisible: "Action & Adventure"
+- assertVisible: "Mistério"
+- assertVisible: "Data Lançamento: 06/11/2021"
+- scroll
+- assertVisible: 'Em meio ao conflito entre as cidades-gêmeas de Piltover e Zaun, duas irmãs lutam em lados opostos de uma guerra entre tecnologias mágicas e convicções incompatíveis.'
+- scrollUntilVisible:
+    element:
+      id: "nameActor" # or any other selector
+    speed: 70
+- scroll
+- assertVisible: "Elenco:"
+- assertVisible: Hailee Steinfeld
+- scrollUntilVisible:
+    element:
+      id: "personOfProduction"
+- assertVisible: "Criado por:"
+- assertVisible: Christian Linke
+- scroll
+- assertVisible: "Empresas de Produção:"
+- assertVisible: Fortiche Production
+- assertVisible: Riot Games

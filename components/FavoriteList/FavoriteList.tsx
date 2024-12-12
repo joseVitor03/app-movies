@@ -2,6 +2,7 @@ import { MovieDetailsType, SerieDetailsType } from "@/types/DetailsType";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import styles from "./styles";
+import { useRouter } from "expo-router";
 
 export default function FavoriteList({
   series,
@@ -12,13 +13,23 @@ export default function FavoriteList({
   movies: MovieDetailsType[];
   activeFavorite: "Movies" | "Series";
 }) {
+  const router = useRouter();
   return (
     <View>
       {activeFavorite === "Movies" && (
         <View style={styles.container}>
           {movies.length > 0 ? (
             movies.map((movie) => (
-              <TouchableOpacity key={movie.data.id} style={styles.card}>
+              <TouchableOpacity
+                onPress={() =>
+                  router.push({
+                    pathname: "/pages/PageDetails/PageDetails",
+                    params: { movieId: movie.data.id },
+                  })
+                }
+                key={movie.data.id}
+                style={styles.card}
+              >
                 <View>
                   <Image
                     style={styles.cardPoster}
@@ -27,6 +38,10 @@ export default function FavoriteList({
                     }}
                   />
                   <Text style={styles.note}>
+                    <Image
+                      style={{ width: 25, height: 25 }}
+                      source={require("@/assets/images/star.png")}
+                    />
                     {movie.data.vote_average.toFixed(1)}/10
                   </Text>
                   <Text style={styles.title}>{movie.data.title}</Text>
@@ -49,7 +64,16 @@ export default function FavoriteList({
         <View style={styles.container}>
           {series.length > 0 ? (
             series.map((serie) => (
-              <TouchableOpacity key={serie.data.id} style={styles.card}>
+              <TouchableOpacity
+                onPress={() =>
+                  router.push({
+                    pathname: "/pages/PageDetails/PageDetails",
+                    params: { serieId: serie.data.id },
+                  })
+                }
+                key={serie.data.id}
+                style={styles.card}
+              >
                 <View>
                   <Image
                     style={styles.cardPoster}
@@ -58,6 +82,10 @@ export default function FavoriteList({
                     }}
                   />
                   <Text style={styles.note}>
+                    <Image
+                      style={{ width: 25, height: 25 }}
+                      source={require("@/assets/images/star.png")}
+                    />
                     {serie.data.vote_average.toFixed(1)}/10
                   </Text>
                   <Text style={styles.title}>{serie.data.name}</Text>

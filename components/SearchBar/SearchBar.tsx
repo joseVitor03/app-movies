@@ -1,8 +1,7 @@
 import { SearchContext } from "@/context/SearchContext";
 import { useContext, useState, useRef } from "react";
 import { Text, View, TextInput } from "react-native";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import styles from "./styles";
 
 export default function SearchBar({ title }: { title: string | undefined }) {
@@ -77,6 +76,7 @@ export default function SearchBar({ title }: { title: string | undefined }) {
 
           {!isFocused ? (
             <AntDesign
+              testID="btnSearch"
               onPress={handleOpenKeyBoard}
               name="search1"
               size={24}

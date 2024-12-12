@@ -1,0 +1,25 @@
+appId: com.anonymous.appfilms
+---
+- runFlow: Login.yaml
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    id: "popular"
+- assertVisible: "Um Sonho de Liberdade"
+- assertVisible: "O Poderoso Chefão"
+- assertVisible: "O Poderoso Chefão: Parte ||"
+- assertVisible: "A Lista de Schindler"
+- scroll
+- scroll
+- assertVisible: "12 Homens e uma Sentença"
+- assertVisible: "A Viagem de Chihiro"
+- tapOn:
+    id: "btnTopRatedSerie"
+- assertVisible: "Breaking Bad: A Química do Mal"
+- assertVisible: "DAN DA DAN"
+- scroll
+- assertVisible: "Hotel Hazbin"
+- assertVisible: "Frieren e a Jornada para o Além"
+- scroll
+- assertVisible: "Arcane"
+- assertVisible: "Avatar: A Lenda de Aang"

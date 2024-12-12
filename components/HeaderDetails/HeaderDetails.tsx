@@ -8,7 +8,7 @@ export default function HeaderDetails({ title }: { title: string }) {
 
   return (
     <View style={styles.header}>
-      <TouchableOpacity onPress={() => router.back()}>
+      <TouchableOpacity testID="btnBack" onPress={() => router.back()}>
         <AntDesign name="arrowleft" size={24} color="#fff" />
       </TouchableOpacity>
       <Text style={styles.title}>{title}</Text>

@@ -18,7 +18,7 @@ export default function CrewList({ crew }: { crew: CrewMember[] }) {
               uri: `https://image.tmdb.org/t/p/w220_and_h330_face${item.profile_path}`,
             }}
           />
-          <View style={styles.containerTexts}>
+          <View testID="personOfProduction" style={styles.containerTexts}>
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.job}>{item.job}</Text>
           </View>

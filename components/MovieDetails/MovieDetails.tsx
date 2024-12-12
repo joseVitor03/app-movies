@@ -68,6 +68,7 @@ export default function MovieDetails({ movie }: { movie: MovieDetailsType }) {
             <TouchableOpacity onPress={handleFavorite}>
               <Entypo
                 name="heart"
+                testID="btnFavoriteMovie"
                 size={24}
                 color={isFavorite !== null ? "red" : "black"}
               />
@@ -100,7 +101,9 @@ export default function MovieDetails({ movie }: { movie: MovieDetailsType }) {
             <CrewList crew={movie.credits.crew} />
           </View>
           <View>
-            <Text style={styles.title}>Empresas de Produção:</Text>
+            <Text testID="EnterprizeProduction" style={styles.title}>
+              Empresas de Produção:
+            </Text>
             <ProductionCompanies companies={movie.data.production_companies} />
           </View>
         </View>
