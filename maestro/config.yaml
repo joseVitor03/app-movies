@@ -1,2 +1,8 @@
 flows:
-  - "tests/**"
+  - "tests/Login.yaml"
+  - "tests/Invalid_Login.yaml"
+  - "tests/Page_Details.yaml"
+  - "tests/Page_Series.yaml"
+  - "tests/Page_Populares.yaml"
+  - "tests/Search_Movies_And_Series.yaml"
+  - "tests/Page_Favorites.yaml"
