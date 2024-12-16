@@ -48,6 +48,12 @@ const styles = StyleSheet.create({
     margin: "2%",
     padding: "5%",
   },
+  notSeries: {
+    flex: 1,
+    textAlign: "center",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 
 export default styles;

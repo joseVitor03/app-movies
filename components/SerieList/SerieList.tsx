@@ -1,8 +1,6 @@
 import { SearchContext } from "@/context/SearchContext";
 import { useContext, useEffect, useRef } from "react";
 import { Image, ScrollView, Text, View, TouchableOpacity } from "react-native";
-import { AnimatedCircularProgress } from "react-native-circular-progress";
-
 import CountPage from "../CountPage/CountPage";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import styles from "./styles";
@@ -77,13 +75,13 @@ export default function SerieList() {
           </View>
         </ScrollView>
       ) : (
-        <View>
+        <View style={styles.notSeries}>
           <MaterialCommunityIcons
             name="filmstrip-off"
             size={50}
             color="#ffff"
           />
-          <Text>Nenhum Filme encontrado.</Text>
+          <Text style={styles.title}>Nenhum Filme encontrado.</Text>
         </View>
       )}
     </View>
