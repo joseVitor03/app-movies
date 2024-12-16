@@ -1,5 +1,4 @@
 <h1 align='center'>APP Movies</h1>
-docker run -d --name wiremock -p 8080:8080 -v $(pwd)/apiMock/mockJson:/home/wiremock wiremock/wiremock
 
 <h4>Glossário</h4>
 
