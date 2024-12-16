@@ -73,27 +73,27 @@ $ npm test
     <img width="250px" src="./assets/images/Tela-Filmes.png" />
   </div>
   <div style="margin: 2%">
-    <h4>Tela de Filmes</h4>
+    <h4>Tela de Séries</h4>
     <img width="250px" src="./assets/images/Tela-Series.png" />
   </div>
   <div style="margin: 2%">
-    <h4>Tela de Filmes</h4>
+    <h4>Tela de Melhores Filmes</h4>
     <img width="250px" src="./assets/images/Tela-Top-Filmes.png" />
   </div>
   <div style="margin: 2%">
-    <h4>Tela de Filmes</h4>
+    <h4>Tela de Melhores Séries</h4>
     <img width="250px" src="./assets/images/Tela-Top-Series.png" />
   </div>
   <div style="margin: 2%">
-    <h4>Tela de Filmes</h4>
+    <h4>Tela de Filmes Favoritos</h4>
     <img width="250px" src="./assets/images/Tela-Filmes-Favoritos.png" />
   </div>
   <div style="margin: 2%">
-    <h4>Tela de Filmes</h4>
+    <h4>Tela de Séries Favoritas</h4>
     <img width="250px" src="./assets/images/Tela-Series-Favoritas.png" />
   </div>
   <div style="margin: 2%">
-    <h4>Tela de Filmes</h4>
+    <h4>Tela de Detalhes</h4>
     <img width="250px" src="./assets/images/Tela-Detalhes.png" />
   </div>
 </div>
